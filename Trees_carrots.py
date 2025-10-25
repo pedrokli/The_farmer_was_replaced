@@ -1,6 +1,6 @@
 def trees_carrots():
 	a = 6
-	action = Items.Water
+	action = Items.Fertilizer
 	
 	for i in range(a):
 		if get_entity_type() != Entities.Tree:
