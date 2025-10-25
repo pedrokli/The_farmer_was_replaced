@@ -1,29 +1,3 @@
-a = 6
-action = 'Water'
+import Trees_carrots
 while True:
-	for i in range(a):
-		if get_entity_type() != Entities.Tree:
-			plant(Entities.Tree)
-		else:
-			if can_harvest():
-				harvest()
-				plant(Entities.Tree)
-			else:
-				use_item(Items.action)
-		if get_pos_y() < a - 1:
-			move(North)
-		else:
-			move(East)
-			
-
-	for i in range(a):
-		if get_ground_type() != Grounds.Soil:
-			till()
-		else:
-			harvest()
-		plant(Entities.Carrot)
-		use_item(Items.action)		
-		if get_pos_y() > 0:
-			move(South)
-		else:
-			move(East)
+	Trees_carrots.trees_carrots()
