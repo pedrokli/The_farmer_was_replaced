@@ -1,5 +1,6 @@
-import Trees_carrots
+import Route
 
 while True:
-	Trees_carrots.trees_carrots()
+	Route.going_up_untill_end()
+	Route.going_down_until_end()
 	
