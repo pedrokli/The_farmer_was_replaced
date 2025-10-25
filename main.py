@@ -1,4 +1,5 @@
 a = 6
+action = 'Water'
 while True:
 	for i in range(a):
 		if get_entity_type() != Entities.Tree:
@@ -8,7 +9,7 @@ while True:
 				harvest()
 				plant(Entities.Tree)
 			else:
-				use_item(Items.Fertilizer)
+				use_item(Items.action)
 		if get_pos_y() < a - 1:
 			move(North)
 		else:
@@ -21,7 +22,7 @@ while True:
 		else:
 			harvest()
 		plant(Entities.Carrot)
-		use_item(Items.Fertilizer)		
+		use_item(Items.action)		
 		if get_pos_y() > 0:
 			move(South)
 		else:
