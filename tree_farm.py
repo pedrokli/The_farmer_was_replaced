@@ -1,4 +1,4 @@
-a = 6
+a = 8
 action = Items.Weird_Substance
 action2 = Items.Water
 plant_up = Entities.Tree
@@ -25,7 +25,8 @@ def going_down_until_end():
 			harvest()
 			plant(plant_up)
 		else:
-			use_item(action2)
+			if get_water() < 0.5:
+				use_item(action2)
 		if get_pos_y() > 0:
 			move(South)
 		else:

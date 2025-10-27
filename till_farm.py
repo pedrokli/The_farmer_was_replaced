@@ -1,5 +1,5 @@
-a = 6
-action = Items.Weird_Substance
+a = 8
+action = Items.Fertilizer
 action2 = Items.Water
 plant_up = Entities.Tree
 plant_down = Entities.Pumpkin
@@ -9,27 +9,35 @@ def going_up_untill_end(plant_up):
 			till()
 		else:
 			harvest()
-		plant(plant_up)
 		use_item(action)
-		use_item(action2)
-		if get_pos_y() < a - 1:
-			move(North)
-		else:
-			move(East)
+		plant(plant_up)
+		if get_water() < 0.5:
 			
+			use_item(action2)
+		use_item(action)
+		if get_pos_y() < a - 1:
+			direction = North
+		else:
+			direction = East
+		move(direction)
 def going_down_until_end(plant_down):
 	for i in range(a):
 		if get_ground_type() != Grounds.Soil:
 			till()
 		else:
 			harvest()
-		plant(plant_down)
 		use_item(action)
-		use_item(action2)			
+		plant(plant_down)
+
+		if get_water() < 0.5:
+			
+			use_item(action2)	
+					
 		if get_pos_y() > 0:
-			move(South)
+			direction = South
 		else:
-			move(East)
+			direction = East
+		move(direction)
 			
 def full_route():
 	going_up_untill_end(Entities.Carrot)

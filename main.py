@@ -1,8 +1,11 @@
-import Route
+import till_farm
 import hay_farm
 import tree_farm
 
 while True:
-	tree_farm.full_route()
-	hay_farm.full_route()
+	if get_time() < 3500:
+		hay_farm.full_route()
+	else:
+		till_farm()	
+	
 	

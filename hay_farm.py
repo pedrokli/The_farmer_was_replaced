@@ -1,4 +1,4 @@
-a = 6
+a = 8
 action = Items.Weird_Substance
 action2 = Items.Water
 plant_up = Entities.Tree
