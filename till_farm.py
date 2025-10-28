@@ -9,9 +9,8 @@ def going_up_untill_end(plant_up):
 			till()
 		else:
 			harvest()
-		use_item(action)
 		plant(plant_up)
-		if get_water() < 0.5:
+		if get_water() < 0.4:
 			
 			use_item(action2)
 		use_item(action)
@@ -26,10 +25,9 @@ def going_down_until_end(plant_down):
 			till()
 		else:
 			harvest()
-		use_item(action)
 		plant(plant_down)
 
-		if get_water() < 0.5:
+		if get_water() < 0.4:
 			
 			use_item(action2)	
 					
